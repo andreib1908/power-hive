@@ -69,8 +69,10 @@ block content
           const data = await res.json();
 
           if (res.ok && data.status === 'success') {
-            alert(res.body._id)
-            window.location.href = `/stations/${body.stationID}/payment`;
+            alert(`✅ Rental started!\nRental ID: ${data.data.rental._id}`);
+            setTimeout(() => {
+              window.location.href = `/stations/${body.stationID}/payment`;
+            }, 2000);
           } else {
             alert(data.message || 'Something went wrong during rental.');
           }
@@ -79,6 +81,4 @@ block content
         }
       });
 
-      // Optional: Log if script is loaded
       console.log('[client] confirm-rent.js script loaded');
-
