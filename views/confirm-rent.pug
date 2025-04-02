@@ -69,6 +69,7 @@ block content
           const data = await res.json();
 
           if (res.ok && data.status === 'success') {
+            alert(res.body._id)
             window.location.href = `/stations/${body.stationID}/payment`;
           } else {
             alert(data.message || 'Something went wrong during rental.');
