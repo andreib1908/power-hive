@@ -23,7 +23,8 @@ block content
         .signup-container
           .signup-title Sign Up
 
-          .signup-form
+          // ✅ Proper form with ID for JS binding
+          form#signupForm.signup-form
             .sign-field
               label(for='firstname') First Name
               input(type='text', name='firstname', placeholder='First Name', required)
@@ -41,16 +42,15 @@ block content
               input(type='email', name='email', placeholder='Email', required)
 
             .sign-field
-              label(for='password') Password
+              label(for='password1') Password
               input(type='password', name='password1', placeholder='Password', required)
 
             .sign-field
-              label(for='password') Confirm Password
+              label(for='password2') Confirm Password
               input(type='password', name='password2', placeholder='Confirm Password', required)
 
-          .signup-button
-            button
-              a(href='/login') Sign Up
+            .signup-button
+              button(type='submit') Sign Up
 
       .bottom-bar
         .social
@@ -65,3 +65,5 @@ block content
         div
 
       .orange-line-low
+
+  

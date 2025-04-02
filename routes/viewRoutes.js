@@ -6,6 +6,7 @@ const router = express.Router();
 
 // ! BEFORE LOGIN
 router.get('/home', viewsController.getHomePage);
+router.get('/', viewsController.getHomePage);
 router.get('/about', viewsController.getAboutPage);
 router.get('/rent-info', viewsController.getRentInfoPage);
 router.get('/map', viewsController.getMapPage);
