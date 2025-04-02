@@ -27,6 +27,12 @@ block content
         h1 Thank you for using PowerHive!
         h2 Don't forget to bring back your power bank in time at any station you want.
 
+        if rentalID
+          .rental-id-box
+            h3 Your Rental ID is:
+            h2(style='color: #ffa600') #{rentalID}
+            p(style='font-size: 0.9rem; color: #777') Keep this safe — you’ll need it to return your power bank.
+
         .buttons
           button.logout
             a(href='/home') Log Out

@@ -89,10 +89,15 @@ exports.getReturnForm = (req, res) => {
 };
 
 exports.getPaymentPage = (req, res) => {
+  // eslint-disable-next-line prefer-destructuring
+  const rentalID = req.query.rentalID;
+
   res.status(200).render('payment', {
     title: 'Payment',
+    rentalID,
   });
 };
+
 // exports.getConfirmRentPage = catchAsync(async (req, res, next) => {
 //   const { stationID } = req.params;
 //   const { bankID, size } = req.query;

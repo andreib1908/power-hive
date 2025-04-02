@@ -43,7 +43,8 @@ block content
         form#rentalForm
           input(type='hidden', name='bankID', value=bankID)
           input(type='hidden', name='stationID', value=stationID)
-          button.continue-button(type='submit') Pay
+          button.continue-button(type='submit', title='Start Rental & Pay') Pay
+
 
         .back-go
           button.back-button
@@ -68,11 +69,9 @@ block content
 
           const data = await res.json();
 
-          if (res.ok && data.status === 'success') {
-            alert(`✅ Rental started!\nRental ID: ${data.data.rental._id}`);
-            setTimeout(() => {
-              window.location.href = `/stations/${body.stationID}/payment`;
-            }, 2000);
+          if (data.status === 'success') {
+            const rentalID = data.data.rental._id;
+            window.location.href = `/stations/${body.stationID}/payment?rentalID=${rentalID}`;
           } else {
             alert(data.message || 'Something went wrong during rental.');
           }

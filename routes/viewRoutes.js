@@ -14,6 +14,7 @@ router.get('/join', viewsController.getJoinPage);
 
 // ! LOGIN
 router.get('/signup', viewsController.getSignupPage);
+router.get('/login', viewsController.getLoginRentPage);
 router.get('/login-rent', viewsController.getLoginRentPage);
 router.get('/login-return', viewsController.getLoginReturnPage);
 
@@ -44,11 +45,5 @@ router.get(
   authController.protect,
   viewsController.getReturnForm,
 );
-
-// * Natours
-router.get('/', viewsController.getHomePage);
-router.get('/tour/:slug', viewsController.getTour);
-
-router.get('/login', viewsController.getLoginForm);
 
 module.exports = router;

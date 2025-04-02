@@ -129,6 +129,7 @@ exports.returnRental = catchAsync(async (req, res, next) => {
 
   // 2) Find the associated power bank
   const bank = await Bank.findById(rental.bank);
+  console.log(rental, rental.bank, req.body);
   if (!bank) return next(new AppError('Associated power bank not found.', 404));
 
   // 3) Determine the return station (you can pass it in req.body.station)
