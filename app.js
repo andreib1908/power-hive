@@ -8,6 +8,7 @@ const xss = require('xss-clean');
 const hpp = require('hpp');
 const methodOverride = require('method-override');
 const cookieParser = require('cookie-parser');
+const compression = require('compression');
 
 const AppError = require('./utils/appError');
 const globalErrorHandler = require('./controllers/errorController');
@@ -89,6 +90,8 @@ app.use(
     ],
   }),
 );
+
+app.use(compression());
 
 // * Adds request time to each request object.
 app.use((req, res, next) => {
