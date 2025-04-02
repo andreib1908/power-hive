@@ -1,0 +1,49 @@
+.content-rent {
+  align-items: start;
+}
+
+.rent-container{
+  margin: 20px 4rem 0;
+  background: #FFD580;
+  display: grid;
+  grid-template-rows: auto 1fr;
+  overflow-y: auto;
+  border-radius: 10px;
+  max-height: 70vh;
+}
+
+.rent-title{
+  align-items: center;
+  font-size: 1.5rem;
+  font-weight: lighter;
+  justify-self: center;
+}
+
+.rent-description{
+  display: grid;
+  grid-template-rows: auto 1fr 1fr 1fr 1fr 1fr;
+  margin: 0 75px;
+}
+
+.rent-step{
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  margin: 0 50px;
+}
+
+.rent-step h1{
+  font-size: 3rem;
+  padding-right: 50px;
+}
+
+.rent-step p{
+  align-self: center;
+  font-size: 2rem;
+}
+
+.rent-step a{
+  align-self: center;
+  justify-self: end;
+  font-size: 1rem;
+  color: black;
+}

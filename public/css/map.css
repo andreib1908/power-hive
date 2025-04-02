@@ -1,0 +1,21 @@
+.content-map{
+    align-items: start;
+}
+
+.map-container{
+    margin: 20px 4rem 0;
+    display: grid;
+    grid-template-rows: auto 1fr;
+    border-radius: 10px;
+    max-height: 70vh;
+}
+
+.map-title{
+    align-items: center;
+    font-size: 3rem;
+    justify-self: center;
+}
+
+.map{
+    /* ADD MAP STYLE HERE */
+}

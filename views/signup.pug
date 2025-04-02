@@ -1,0 +1,67 @@
+extends base
+
+block styles
+  link(rel='stylesheet' href='/css/home.css')
+  link(rel='stylesheet' href='/css/signup.css')
+
+block content
+  main.main
+    .container
+      .orange-line-high
+
+      .top-bar
+        .logo
+          img(src='/img/PH_logo.png')
+        div
+        .nav
+          a(href='/login') Log In
+          a.active(href='/signup') Sign Up
+          a(href='/home') Home
+        .auth
+
+      .content-signup
+        .signup-container
+          .signup-title Sign Up
+
+          .signup-form
+            .sign-field
+              label(for='firstname') First Name
+              input(type='text', name='firstname', placeholder='First Name', required)
+
+            .sign-field
+              label(for='lastname') Last Name
+              input(type='text', name='lastname', placeholder='Last Name', required)
+
+            .sign-field
+              label(for='address') Address
+              input(type='text', name='address', placeholder='Address', required)
+
+            .sign-field
+              label(for='email') Email
+              input(type='email', name='email', placeholder='Email', required)
+
+            .sign-field
+              label(for='password') Password
+              input(type='password', name='password1', placeholder='Password', required)
+
+            .sign-field
+              label(for='password') Confirm Password
+              input(type='password', name='password2', placeholder='Confirm Password', required)
+
+          .signup-button
+            button
+              a(href='/login') Sign Up
+
+      .bottom-bar
+        .social
+          a(href='')
+            img(src='/img/X.png')
+          a(href='')
+            img(src='/img/insta.png')
+          a(href='')
+            img(src='/img/linkedin.png')
+        .terms
+          a(href='/terms') Terms and Conditions
+        div
+
+      .orange-line-low

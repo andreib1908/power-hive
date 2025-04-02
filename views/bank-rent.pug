@@ -1,0 +1,61 @@
+extends base
+
+block styles
+  link(rel='stylesheet' href='/css/home.css')
+  link(rel='stylesheet' href='/css/bank-select.css')
+
+block content
+  main.main
+    .container
+      .orange-line-high
+
+      .top-bar
+        .logo
+          img(src='/img/PH_logo.png')
+        div
+        .nav
+          a(href='/stations') Power Stations
+          a(href='/stations-return') Return Power Bank
+          a(href='/home') Log Out
+        .auth
+
+      .content-bank
+        .progress
+          .done Station → Power Bank
+          .todo → Confirm → Payment
+
+        h2= `Power Bank Station: ${stationName}`
+
+        .bank-options-container
+          each size in ['small', 'medium', 'large']
+            - const bankData = availability[size]
+            - const isAvailable = bankData.count > 0
+            a.bank-option(
+              href=isAvailable ? `/stations/${stationID}/confirm-rent?bankID=${bankData.earliestBank._id}&size=${size}` : '#',
+              class=isAvailable ? '' : 'disabled',
+              style=isAvailable ? '' : 'pointer-events: none; opacity: 0.5;'
+            )
+              h3= size.charAt(0).toUpperCase() + size.slice(1)
+              h1= size === 'small' ? '€5' : size === 'medium' ? '€7' : '€10'
+              if isAvailable
+                h4 Availability: #{bankData.count}
+              else
+                h4(style='color: red') Unavailable
+
+        .back-go
+          button.back-button(type='button')
+            a(href='/stations') Back
+
+      .bottom-bar
+        .social
+          a(href='')
+            img(src='/img/X.png')
+          a(href='')
+            img(src='/img/insta.png')
+          a(href='')
+            img(src='/img/linkedin.png')
+        .terms
+          a(href='/terms') Terms and Conditions
+        div
+
+      .orange-line-low

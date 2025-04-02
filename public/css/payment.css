@@ -1,0 +1,66 @@
+.content-payment{
+    align-items: start;
+}
+
+.progress{
+    display: grid;
+    grid-template-columns: 1fr auto;
+    justify-content: center;
+    font-weight: bold;
+    font-size: 1rem;
+    margin: 1.5rem 15px 1.5rem 0;
+}
+
+.done{
+    opacity: 100%;
+    justify-self: right;
+}
+
+.todo{
+    opacity: 0.5;
+    margin-left: 3px;
+}
+
+h1{
+    margin-top: 15vh;
+    justify-self: center;
+    font-weight: bolder;
+    font-size: 3rem;
+}
+
+h2{
+    justify-self: center;
+    font-weight: lighter;
+}
+
+.buttons{
+    display: grid;
+    grid-template-columns: auto auto;
+}
+
+.logout{
+    background: #000000;
+    border-radius: 8px;
+    margin: 20px 10px 0 50%;
+    padding: 10px 0;
+    border: none;
+}
+
+.logout a{
+    color: white;
+    text-decoration: none;
+}
+
+.renting{
+    background: #FFAB01;
+    border-radius: 8px;
+    margin: 20px 50% 0 10px;
+    padding: 10px 0;
+    border: none;
+}
+
+.renting a{
+    color: black;
+    text-decoration: none;
+}
+

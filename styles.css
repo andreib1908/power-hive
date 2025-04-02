@@ -1,0 +1,104 @@
+y {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #fdf6e3;
+  text-align: center;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  background-color: #f4a261;
+}
+
+.logo {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+}
+
+nav ul li {
+  margin: 0 15px;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: black;
+  font-weight: bold;
+  padding: 5px;
+}
+
+nav ul li a.active {
+  background-color: white;
+  border-radius: 5px;
+}
+
+.auth-buttons button {
+  margin-left: 10px;
+  padding: 5px 10px;
+  border: none;
+  cursor: pointer;
+}
+
+.sign-in {
+  background-color: white;
+}
+
+.register {
+  background-color: black;
+  color: white;
+}
+
+main {
+  padding: 50px 20px;
+}
+
+h1 {
+  font-size: 60px;
+  font-weight: bold;
+}
+
+.hexagon-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+  margin: 20px 0;
+}
+
+.hex {
+  width: 100px;
+  height: 100px;
+  background-color: #f4c542;
+  clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+}
+
+.buttons button {
+  padding: 10px 20px;
+  margin: 10px;
+  background-color: #f4c542;
+  border: none;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+footer {
+  background-color: white;
+  padding: 20px;
+}
+
+.socials a {
+  margin: 0 10px;
+  text-decoration: none;
+  font-weight: bold;
+  color: black;
+}

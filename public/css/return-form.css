@@ -1,0 +1,71 @@
+.content-return-form {
+  display: flex;
+  justify-content: center;
+  padding: 4rem 2rem;
+  min-height: calc(100vh - 250px); /* fit better with footer + header */
+}
+
+.return-form-box {
+  background: #fff;
+  padding: 2rem 2.5rem;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  max-width: 500px;
+  width: 100%;
+  text-align: left;
+  height: fit-content;
+}
+
+.return-form-box h2 {
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+
+.return-form-box label {
+  display: block;
+  font-size: 1.05rem;
+  margin-bottom: 0.5rem;
+  margin-top: 1rem;
+  color: #333;
+}
+
+.return-form-box input {
+  width: 100%;
+  padding: 0.8rem;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  margin-bottom: 0.5rem;
+}
+
+.return-form-box .continue-button {
+  margin-top: 1.5rem;
+  width: 100%;
+  padding: 0.9rem;
+  font-weight: bold;
+  font-size: 1rem;
+  background-color: #ffa600;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.return-form-box .continue-button:hover {
+  background-color: #e69500;
+}
+
+.return-form-box .back-button {
+  display: block;
+  margin-top: 1rem;
+  text-align: center;
+  color: #3498db;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.return-form-box .back-button:hover {
+  color: #1d6fa5;
+}

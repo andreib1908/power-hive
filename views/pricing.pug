@@ -1,0 +1,56 @@
+extends base
+
+block styles
+  link(rel='stylesheet' href='/css/home.css')
+  link(rel='stylesheet' href='/css/pricing.css')
+
+block content
+  main.main
+    .container
+      .orange-line-high
+
+      .top-bar
+        .logo
+          img(src='/img/PH_logo.png')
+        div
+        .nav
+          a(href='/home') Home
+          a(href='/about') About Us
+          a(href='/rent-info') Renting Info
+          a(href='/map') Map
+          a.active(href='/pricing') Pricing
+          a(href='/join') Join Us
+        .auth
+          button
+            a(href='/signup') Sign Up
+          button
+            a(href='/login') Log In
+
+      .content-price
+        .price-container
+          .price-title
+            h1 Pricing
+          .price-options-container
+            .price-option
+              h3 Small
+              h1 €5
+            .price-option
+              h3 Medium
+              h1 €7
+            .price-option
+              h3 Large
+              h1 €10
+
+      .bottom-bar
+        .social
+          a(href='')
+            img(src='/img/X.png')
+          a(href='')
+            img(src='/img/insta.png')
+          a(href='')
+            img(src='/img/linkedin.png')
+        .terms
+          a(href='/terms') Terms and Conditions
+        div
+
+      .orange-line-low

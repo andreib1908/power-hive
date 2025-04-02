@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Confirmation Rental</title>
+    <link rel="stylesheet" href="css/home.css">
+    <link rel="stylesheet" href="css/confirm-rent.css">
+</head>
+<body>
+    <div class="container">
+        <div class="orange-line-high"></div>
+        <div class="top-bar">
+            <div class="logo">
+                <img src="img/PH_logo.png">
+            </div>
+            <div></div>
+            <div class="nav">
+                <a href="stations-rent.html">Power Stations</a>
+                <a href="stations-return.html">Return Power Bank</a>
+                <a href="home.html">Log Out</a>
+            </div>
+            <div class="auth"></div>
+        </div>
+        <div class="content-confirm-rental">
+            <div class="progress">
+                <div class="done">Station  → Power Bank → Confirm </div>
+                <div class="todo">→ Payment</div>
+            </div>
+            <div class="receipt">
+                <div class="top-receipt">
+                    <img src="img/PH_logo.png">
+                    <h3>PowerHive</h3>
+                </div>
+                <div class="address">
+                    <h3>Address: {%location%}</h3>
+                </div>
+                <div class="row">
+                    <div class="left">Date: {%currentDate%}</div>
+                    <div class="right">{%currentTime%}</div>
+                </div>
+                <div class="row">
+                    <div class="left">Power Bank - {%size%}</div>
+                    <div class="right">{%price%}</div>
+                </div>
+                <div class="price">
+                    <div class="total-title">Total Amount</div>
+                    <div class="total-price">{%price%}</div>
+                </div>
+            </div>
+            <div class="back-go">
+                <button class="back-button">
+                    <a href="bank-rent.html">Back</a>
+                </button>
+                <button class="continue-button">
+                    <a href="payment.html">Pay</a>
+                </button>
+            </div>
+        </div>
+        <div class="bottom-bar">
+            <div class="social">
+                <a href=" ">
+                    <img src="img/X.png">
+                </a>
+                <a href=" ">
+                    <img src="img/insta.png">
+                </a>
+                <a href=" ">
+                    <img src="img/linkedin.png">
+                </a>
+            </div>
+            <div class="terms">
+                <a href="terms-in.html">Terms and Conditions</a>
+            </div>
+            <div></div>
+        </div>
+        <div class="orange-line-low"></div>
+    </div>
+</body>
+</html>

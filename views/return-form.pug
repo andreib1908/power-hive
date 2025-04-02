@@ -1,0 +1,84 @@
+extends base
+
+block styles
+  link(rel='stylesheet' href='/css/home.css')
+  link(rel='stylesheet' href='/css/return-form.css')
+
+block content
+  main.main
+    .container
+      .orange-line-high
+
+      .top-bar
+        .logo
+          img(src='/img/PH_logo.png')
+        div
+        .nav
+          a(href='/stations') Power Stations
+          a(href='/home') Log Out
+        .auth
+
+      .content-return-form
+        .return-form-box
+          h2 Return Power Bank
+
+          form#returnForm
+            label(for='rentalID') Rental ID:
+            input#rentalID(type='text', name='rentalID', placeholder='Enter your Rental ID', required)
+
+            label(for='socketNr') Socket Number:
+            input#socketNr(type='number', name='socketNr', placeholder='Enter socket number', required, min='1', max='999')
+
+            button.continue-button(type='submit') Complete Return
+
+          a.back-button(href='/stations') ← Back to Stations
+
+      .bottom-bar
+        .social
+          a(href='')
+            img(src='/img/X.png')
+          a(href='')
+            img(src='/img/insta.png')
+          a(href='')
+            img(src='/img/linkedin.png')
+        .terms
+          a(href='/terms') Terms and Conditions
+        div
+
+      .orange-line-low
+
+  script.
+    document.getElementById('returnForm').addEventListener('submit', async function(e) {
+      e.preventDefault();
+      const form = e.target;
+      const formData = new FormData(form);
+      const body = Object.fromEntries(formData.entries());
+
+      const pathParts = window.location.pathname.split('/');
+      const stationID = pathParts[2];
+      body.station = stationID;
+
+      try {
+        const res = await fetch('/api/v1/rentals/return', {
+          method: 'PATCH',
+          headers: {
+            'Content-Type': 'application/json'
+          },
+          credentials: 'include',
+          body: JSON.stringify(body)
+        });
+
+        const data = await res.json();
+
+        if (res.ok && data.status === 'success') {
+          alert('Power bank returned successfully!');
+          window.location.href = '/stations';
+        } else {
+          alert(data.message || 'Something went wrong during return.');
+        }
+      } catch (err) {
+        alert('An error occurred. Please try again.');
+      }
+    });
+
+    console.log('[client] return-form.js script loaded');

@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Stations List Rental</title>
+    <link rel="stylesheet" href="css/home.css">
+    <link rel="stylesheet" href="css/station.css">
+</head>
+<body>
+    <div class="container">
+        <div class="orange-line-high"></div>
+        <div class="top-bar">
+            <div class="logo">
+                <img src="img/PH_logo.png">
+            </div>
+            <div></div>
+            <div class="nav">
+                <a href="stations-rent.html" class="active">Power Stations</a>
+                <a href="stations-return.html">Return Power Bank</a>
+                <a href="home.html">Log Out</a>
+            </div>
+            <div class="auth"></div>
+        </div>
+        <div class="content-station">
+            <div class="progress">
+                <div class="done">Station </div>
+                <div class="todo"> → Power Bank → Confirm → Payment</div>
+            </div>
+            <div class="station-container">
+                <div class="station-table">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Power Station</th>
+                                <th>Address</th>
+                                <th>Availability</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>{%name%}</td>
+                                <td>{%location%}</td>
+                                <td>{%freePowerBankNr%}</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="station-filter">
+                    <h1>Station Filter</h1>
+                    <div class="location-selector">
+                        <details>
+                            <summary>Location</summary>
+                            <div class="dropdown-location">
+                                <label><input type="checkbox" value="Location 1"> Borne</label>
+                                <label><input type="checkbox" value="Location 2"> Delden</label>
+                                <label><input type="checkbox" value="Location 3"> Deventer</label>
+                                <label><input type="checkbox" value="Location 4"> Enschede</label>
+                                <label><input type="checkbox" value="Location 5"> Hengelo</label>
+                            </div>
+                        </details>
+                    </div>
+                </div>
+                <div class="station-map">
+<!--                    HERE SHOULD THE MAP GO-->
+                </div>
+            </div>
+        </div>
+        <div class="bottom-bar">
+            <div class="social">
+                <a href="">
+                    <img src="img/X.png">
+                </a>
+                <a href="">
+                    <img src="img/insta.png">
+                </a>
+                <a href="">
+                    <img src="img/linkedin.png">
+                </a>
+            </div>
+            <div class="terms">
+                <a href="terms-in.html">Terms and Conditions</a>
+            </div>
+            <div></div>
+        </div>
+        <div class="orange-line-low"></div>
+    </div>
+</body>
+</html>

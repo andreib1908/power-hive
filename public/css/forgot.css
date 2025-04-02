@@ -1,0 +1,68 @@
+.content-forgot {
+    align-items: start;
+}
+
+.forgot-container{
+    margin: 20px 15rem 0px;
+    background: white;
+    box-shadow: 0 2px 10px lightgray;
+    display: grid;
+    grid-template-rows: auto 1fr;
+    overflow-y: auto;
+    border-radius: 10px;
+    height: 70vh;
+}
+
+.forgot-title{
+    align-items: center;
+    font-size: 2.5rem;
+    font-weight: lighter;
+    justify-self: center;
+    margin-top: 10px;
+}
+
+.reset-form{
+    display: grid;
+    grid-template-rows: auto auto auto 1fr;
+    margin-top: 40px;
+}
+
+.reset-form label{
+    margin-top: 8px;
+    margin-left: 12px;
+    align-self: end;
+}
+
+.reset-form input{
+    margin: 10px;
+    border-radius: 10px;
+    border: black 1px solid;
+    height: 40px;
+    padding-left: 5px;
+}
+
+.reset-button{
+    justify-self: center;
+    display: flex;
+    width: 100%;
+}
+
+.reset-button button{
+    height: 40px;
+    background: black;
+    border-radius: 5px;
+    width: 100%;
+    margin: 10px;
+    border: none;
+    cursor: pointer;
+}
+
+.reset-button button:hover{
+    background: #444444;
+}
+
+.reset-button button a{
+    color: white;
+    text-decoration: none;
+}
+

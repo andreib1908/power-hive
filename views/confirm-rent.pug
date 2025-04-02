@@ -1,0 +1,83 @@
+extends base
+
+block styles
+  link(rel='stylesheet' href='/css/home.css')
+  link(rel='stylesheet' href='/css/confirm-rent.css')
+
+block content
+  main.main
+    .container
+      .orange-line-high
+
+      .top-bar
+        .logo
+          img(src='/img/PH_logo.png')
+        div
+        .nav
+          a(href='/stations') Power Stations
+          a(href='/stations-return') Return Power Bank
+          a(href='/home') Log Out
+        .auth
+
+      .content-confirm-rental
+        .progress
+          .done Station → Power Bank → Confirm
+          .todo → Payment
+
+        .receipt
+          .top-receipt
+            img(src='/img/PH_logo.png')
+            h3 PowerHive
+          .address
+            h3 Address: #{location}
+          .row
+            .left Date: #{currentDate}
+            .right #{currentTime}
+          .row
+            .left Power Bank - #{size}
+            .right #{price}
+          .price
+            .total-title Total Amount
+            .total-price #{price}
+
+        form#rentalForm
+          input(type='hidden', name='bankID', value=bankID)
+          input(type='hidden', name='stationID', value=stationID)
+          button.continue-button(type='submit') Pay
+
+        .back-go
+          button.back-button
+            a(href=`/stations/${stationID}/bank-rent`) Back
+
+    script.
+      document.getElementById('rentalForm').addEventListener('submit', async function(e) {
+        e.preventDefault();
+        const form = e.target;
+        const formData = new FormData(form);
+        const body = Object.fromEntries(formData.entries());
+
+        try {
+          const res = await fetch('/api/v1/rentals/startRental', {
+            method: 'POST',
+            headers: {
+              'Content-Type': 'application/json'
+            },
+            credentials: 'include',
+            body: JSON.stringify(body)
+          });
+
+          const data = await res.json();
+
+          if (res.ok && data.status === 'success') {
+            window.location.href = `/stations/${body.stationID}/payment`;
+          } else {
+            alert(data.message || 'Something went wrong during rental.');
+          }
+        } catch (err) {
+          alert('An error occurred. Please try again.');
+        }
+      });
+
+      // Optional: Log if script is loaded
+      console.log('[client] confirm-rent.js script loaded');
+

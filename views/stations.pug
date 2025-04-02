@@ -1,0 +1,84 @@
+extends base
+
+block styles
+  link(rel='stylesheet' href='/css/home.css')
+  link(rel='stylesheet' href='/css/station.css')
+
+block content
+  main.main
+    .container
+      .orange-line-high
+
+      .top-bar
+        .logo
+          img(src='/img/PH_logo.png')
+        div
+        .nav
+          a.active(href='/stations') Power Stations
+          a(href='/home') Log Out
+        .auth
+
+      .content-station
+        .progress
+          .done Station
+          .todo → Power Bank → Confirm → Payment / Return
+
+        .station-container
+          .station-table
+            table
+              thead
+                tr
+                  th Power Station
+                  th Address
+                  th Availability
+                  th Actions
+              tbody
+                each station in stations
+                  tr
+                    td= station.name
+                    td= station.location
+                    td= station.freePowerBankNr
+                    td.actions
+                      a.button-rent(href=`/stations/${station._id}/bank-rent`) RENT
+                      a.button-return(href=`/stations/${station._id}/return-form`) RETURN
+
+          .station-filter
+            h1 Station Filter
+            form(action='/stations', method='GET')
+              .location-selector
+                details(open)
+                  summary Location
+                  .dropdown-location
+                    label
+                      input(type='checkbox', name='location', value='Borne')
+                      | Borne
+                    label
+                      input(type='checkbox', name='location', value='Delden')
+                      | Delden
+                    label
+                      input(type='checkbox', name='location', value='Deventer')
+                      | Deventer
+                    label
+                      input(type='checkbox', name='location', value='Enschede')
+                      | Enschede
+                    label
+                      input(type='checkbox', name='location', value='Hengelo')
+                      | Hengelo
+              button(type='submit') Apply Filters
+
+          .station-map
+            //- HERE SHOULD THE MAP GO
+
+      .bottom-bar
+        .social
+          a(href='')
+            img(src='/img/X.png')
+          a(href='')
+            img(src='/img/insta.png')
+          a(href='')
+            img(src='/img/linkedin.png')
+        .terms
+          a(href='/terms') Terms and Conditions
+        div
+
+      .orange-line-low

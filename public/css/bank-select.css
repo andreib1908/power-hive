@@ -1,0 +1,121 @@
+.content-bank {
+  align-items: start;
+}
+
+.bank-container {
+  margin: 20px 4rem 0;
+  display: grid;
+  grid-template-rows: auto auto 1fr;
+  border-radius: 10px;
+  max-height: 70vh;
+}
+
+.progress {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  justify-content: center;
+  font-weight: bold;
+  font-size: 1rem;
+  margin: 1.5rem 15px 1.5rem 0;
+}
+
+.done {
+  opacity: 100%;
+  justify-self: right;
+}
+
+.todo {
+  opacity: 0.5;
+  margin-left: 3px;
+}
+
+.bank-options-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+
+.bank-option {
+  display: grid;
+  grid-template-rows: auto 1fr;
+  margin: 0 20px;
+  background: #f4d28d;
+  justify-content: center;
+  border-radius: 10px;
+  border: none;
+  cursor: pointer;
+}
+
+/*THIS SHOULD BE CHANGED WHEN ADDED JAVASCRIPT*/
+.bank-option:nth-child(1):active {
+  background: #b39b69;
+}
+
+.bank-option:nth-child(2) {
+  background: #fcc75b;
+}
+
+/*THIS SHOULD BE CHANGED WHEN ADDED JAVASCRIPT*/
+.bank-option:nth-child(2):active {
+  background: #d5ab4f;
+}
+
+.bank-option:nth-child(3) {
+  background: #ffab01;
+}
+
+/*THIS SHOULD BE CHANGED WHEN ADDED JAVASCRIPT*/
+.bank-option:nth-child(3):active {
+  background: #bc7d00;
+}
+
+.bank-option h3 {
+  font-weight: bold;
+  justify-self: center;
+  font-size: 2rem;
+}
+
+.bank-option h1 {
+  font-size: 3.5rem;
+  justify-self: center;
+  font-weight: lighter;
+}
+
+.back-go {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  margin: 20px;
+}
+
+.back-button {
+  background: lightgray;
+  padding: 12px;
+  border: none;
+  border-radius: 8px;
+  margin-right: 75%;
+}
+
+.back-button a {
+  font-weight: bold;
+  text-decoration: none;
+  color: black;
+}
+
+.continue-button {
+  background: #ffb47f;
+  padding: 12px;
+  border: none;
+  border-radius: 8px;
+  margin-left: 75%;
+  font-weight: bold;
+}
+
+.continue-button a {
+  font-weight: bold;
+  text-decoration: none;
+  color: black;
+}
+
+.bank-option.highlight {
+  border: 2px solid #ffa600;
+  background-color: #fff8e1;
+}

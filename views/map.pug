@@ -1,0 +1,48 @@
+extends base
+
+block styles
+  link(rel='stylesheet' href='/css/home.css')
+  link(rel='stylesheet' href='/css/map.css')
+
+block content
+  main.main
+    .container
+      .orange-line-high
+
+      .top-bar
+        .logo
+          img(src='/img/PH_logo.png')
+        div
+        .nav
+          a(href='/home') Home
+          a(href='/about') About Us
+          a(href='/rent-info') Renting Info
+          a.active(href='/map') Map
+          a(href='/pricing') Pricing
+          a(href='/join') Join Us
+        .auth
+          button
+            a(href='/signup') Sign Up
+          button
+            a(href='/login') Log In
+
+      .content-map
+        .map-container
+          .map-title Locations in the Netherlands
+          .map
+            //- HERE SHOULD THE MAP GO
+            //- Later you can embed an actual map here (Leaflet, Mapbox, etc.)
+
+      .bottom-bar
+        .social
+          a(href='')
+            img(src='/img/X.png')
+          a(href='')
+            img(src='/img/insta.png')
+          a(href='')
+            img(src='/img/linkedin.png')
+        .terms
+          a(href='/terms') Terms and Conditions
+        div
+
+      .orange-line-low

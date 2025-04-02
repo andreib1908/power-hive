@@ -1,0 +1,88 @@
+.content-join{
+  align-items: start;
+}
+
+.join-container{
+  margin: 20px 4rem 0;
+  background: #FFD580;
+  display: grid;
+  grid-template-rows: auto 1fr;
+  overflow-y: auto;
+  border-radius: 10px;
+  max-height: 70vh;
+}
+
+.join-title{
+  align-items: center;
+  font-size: 1.5rem;
+  font-weight: lighter;
+  justify-self: center;
+}
+
+.join-description{
+  display: grid;
+  grid-template-rows: auto 1fr;
+  margin: 0 75px;
+}
+
+.join-description p a{
+  color: black;
+}
+
+.join-description-container{
+  display: grid;
+  grid-template-rows: auto 1fr;
+  grid-template-columns: auto 1fr;
+  padding-bottom: 20px;
+}
+
+.join-benefit{
+  display: grid;
+  grid-template-rows: auto auto auto auto auto;
+  grid-row-start: 1;
+  grid-row-end: 3;
+  background: white;
+  padding: 10px;
+  margin-right: 20px;
+  border-radius: 8px;
+}
+
+.join-benefit button{
+  background: #ff6a00;
+  padding: 10px 0;
+  border: none;
+  border-radius: 5px;
+  margin: 5px;
+}
+
+.join-benefit button a{
+  color: white;
+  text-decoration: none;
+}
+
+.join-custom{
+  display: grid;
+  grid-template-rows: auto auto;
+  background: rgba(255, 106, 0, 0.68);
+  padding: 10px;
+  border-radius: 8px;
+  margin-bottom: 20px;
+}
+
+.join-odoo button{
+  background: black;
+  border-radius: 5px;
+  border: none;
+  justify-self: center;
+  display: flex;
+  width: 100%;
+  height: 100%;
+}
+
+.join-odoo button a{
+  color: white;
+  font-weight: lighter;
+  font-size: 1.7rem;
+  align-self: center;
+  padding: 20px;
+}

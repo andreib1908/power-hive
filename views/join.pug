@@ -1,0 +1,77 @@
+extends base
+
+block styles
+  link(rel='stylesheet' href='/css/home.css')
+  link(rel='stylesheet' href='/css/join-us.css')
+
+block content
+  main.main
+    .container
+      .orange-line-high
+
+      .top-bar
+        .logo
+          img(src='/img/PH_logo.png')
+        div
+        .nav
+          a(href='/home') Home
+          a(href='/about') About Us
+          a(href='/rent-info') Renting Info
+          a(href='/map') Map
+          a(href='/pricing') Pricing
+          a.active(href='/join') Join Us
+        .auth
+          button
+            a(href='/signup') Sign Up
+          button
+            a(href='/login') Log In
+
+      .content-join
+        .join-container
+          .join-title
+            h1 Join the Hive
+
+          .join-description
+            p
+              | One of PowerHive's main concepts is the Free-Floating System. Without
+              | a network of power bank stations across cities, this won't be possible.
+              | To grow this network, we need your help! Are you a business owner or in a
+              | managerial position on an educational institution? Join the Hive by
+              | ordering your own, customised power bank station and help us make the
+              | world a more connected place.
+              a(href='/about') Read more about PowerHive's vision →
+
+            .join-description-container
+              .join-benefit
+                h1 What are your benefits?
+                p 🔸 Boosted customer traffic
+                p 🔸 Revenue sharing framework
+                p 🔸 Customisation options
+                button
+                  a(href='https://edu-erp-jiya.odoo.com') Join the Network
+
+              .join-custom
+                h1 Customisation
+                p
+                  | We create your personalized station in our factory using premium
+                  | materials tailored to your needs. Place your order today and
+                  | become part of our network of businesses and academic institutions.
+                  | Customisation options: color, power bank sizes, amount of sockets.
+
+              .join-odoo
+                button
+                  a(href='https://edu-erp-jiya.odoo.com') Visit our Odoo Website →
+
+      .bottom-bar
+        .social
+          a(href='')
+            img(src='/img/X.png')
+          a(href='')
+            img(src='/img/insta.png')
+          a(href='')
+            img(src='/img/linkedin.png')
+        .terms
+          a(href='/terms') Terms and Conditions
+        div
+
+      .orange-line-low

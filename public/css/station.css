@@ -1,0 +1,177 @@
+.content-station {
+  display: flex;
+  justify-content: center;
+  padding-top: 2rem;
+}
+
+/* Wider container with more room */
+.station-container {
+  width: 90%;
+  max-width: 1200px;
+  display: grid;
+  grid-template-columns: 3fr 1fr;
+  gap: 2rem;
+  align-items: start;
+}
+
+/* Table area */
+.station-table {
+  background: white;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  border-radius: 10px;
+  width: 100%;
+}
+
+.station-table table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0;
+}
+
+.station-table thead th {
+  background: lightgray;
+  color: black;
+  padding: 10px;
+  border: 2px solid grey;
+}
+
+.station-table thead th:first-child {
+  border-top-left-radius: 10px;
+}
+
+.station-table thead th:last-child {
+  border-top-right-radius: 10px;
+}
+
+.station-table tbody td {
+  padding: 10px;
+  border: 2px solid grey;
+}
+
+/* Filter area */
+.station-filter {
+  background: #fff;
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  width: 100%;
+}
+
+.location-selector {
+  display: block;
+  width: 100%;
+}
+
+summary {
+  background: white;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  cursor: pointer;
+  list-style: none;
+  width: 100%;
+}
+
+.dropdown-location {
+  background: #fff;
+  border: 1px solid #ccc;
+  border-top: none;
+  border-radius: 0 0 5px 5px;
+  padding: 10px;
+  max-height: 20vh;
+  overflow-y: auto;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.dropdown-location label {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 5px;
+  cursor: pointer;
+}
+
+button {
+  margin-top: 1rem;
+  padding: 0.5rem 1.5rem;
+  font-weight: bold;
+  background-color: #ffa600;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  width: 100%;
+}
+.content-return {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 4rem 2rem;
+}
+
+.return-box {
+  background: #fff;
+  padding: 2rem 3rem;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  max-width: 600px;
+  width: 100%;
+  text-align: center;
+}
+
+.return-box h1 {
+  margin-bottom: 1rem;
+}
+
+.return-box p {
+  font-size: 1rem;
+  margin-bottom: 2rem;
+  color: #555;
+}
+
+.return-box input {
+  width: 100%;
+  padding: 0.75rem;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  margin-bottom: 1rem;
+}
+
+.return-box button {
+  width: 100%;
+  padding: 0.75rem;
+  font-weight: bold;
+  background-color: #ffa600;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+td.actions {
+  display: flex;
+  gap: 0.5rem;
+  justify-content: center;
+}
+
+.button-rent,
+.button-return {
+  padding: 0.4rem 0.8rem;
+  font-size: 0.9rem;
+  border: none;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: bold;
+  color: white;
+  cursor: pointer;
+}
+
+.button-rent {
+  background-color: #2ecc71; /* green */
+}
+
+.button-return {
+  background-color: #3498db; /* blue */
+}

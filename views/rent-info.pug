@@ -1,0 +1,80 @@
+extends base
+
+block styles
+  link(rel='stylesheet' href='/css/home.css')
+  link(rel='stylesheet' href='/css/rent-info.css')
+
+block content
+  main.main
+    .container
+      .orange-line-high
+
+      .top-bar
+        .logo
+          img(src='/img/PH_logo.png')
+        div
+        .nav
+          a(href='/home') Home
+          a(href='/about') About Us
+          a.active(href='/rent-info') Renting Info
+          a(href='/map') Map
+          a(href='/pricing') Pricing
+          a(href='/join') Join Us
+        .auth
+          button
+            a(href='/signup') Sign Up
+          button
+            a(href='/login') Log In
+
+      .content-rent
+        .rent-container
+          .rent-title
+            h1 Renting Information
+
+          .rent-description
+            p
+              | Have you ever found yourself in the middle of city center with
+              | your phone battery on 20% and no real way of charging it back
+              | until you get back home? This can be quite stressful, especially
+              | in our digital age where we depend on our phones for daily activities.
+              | Fear not! PowerHive will come to your aid in no time! Follow the next
+              | steps and receive your rented power bank.
+
+            .rent-step
+              h1 1
+              p Find your nearest power bank station
+              a(href='/map') Explore the Map →
+
+            .rent-step
+              h1 2
+              p Make an account or log in
+              a(href='/signup') Create an Account →
+
+            .rent-step
+              h1 3
+              p Select your power bank and station
+              a(href='/map') Find an available station →
+
+            .rent-step
+              h1 4
+              p Pay for your rental by use
+              a(href='/pricing') View Pricing Options →
+
+            .rent-step
+              h1 5
+              p Return your power bank anywhere, anytime you want
+              a(href='/map') Overview of the Stations →
+
+      .bottom-bar
+        .social
+          a(href='')
+            img(src='/img/X.png')
+          a(href='')
+            img(src='/img/insta.png')
+          a(href='')
+            img(src='/img/linkedin.png')
+        .terms
+          a(href='/terms') Terms and Conditions
+        div
+
+      .orange-line-low

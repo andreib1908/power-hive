@@ -1,0 +1,14 @@
+.content-terms{
+    align-items: start;
+    margin-left: 50px;
+    overflow-y: auto;
+    max-height: 80vh;
+}
+
+.content-terms p{
+    margin-right: 50px;
+}
+
+.content-terms section{
+    margin-right: 50px;
+}

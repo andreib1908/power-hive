@@ -1,0 +1,48 @@
+extends base
+
+block styles
+  link(rel='stylesheet' href='/css/home.css')
+  link(rel='stylesheet' href='/css/payment.css')
+
+block content
+  main.main
+    .container
+      .orange-line-high
+
+      .top-bar
+        .logo
+          img(src='/img/PH_logo.png')
+        div
+        .nav
+          a(href='/stations') Power Stations
+          a(href='/stations-return') Return Power Bank
+          a(href='/home') Log Out
+        .auth
+
+      .content-payment
+        .progress
+          .done Station → Power Bank → Confirm → Payment
+          .todo
+
+        h1 Thank you for using PowerHive!
+        h2 Don't forget to bring back your power bank in time at any station you want.
+
+        .buttons
+          button.logout
+            a(href='/home') Log Out
+          button.renting
+            a(href='/stations') Keep Renting
+
+      .bottom-bar
+        .social
+          a(href='')
+            img(src='/img/X.png')
+          a(href='')
+            img(src='/img/insta.png')
+          a(href='')
+            img(src='/img/linkedin.png')
+        .terms
+          a(href='/terms') Terms and Conditions
+        div
+
+      .orange-line-low
