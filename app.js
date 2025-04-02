@@ -19,6 +19,7 @@ const stationRouter = require('./routes/stationRoutes');
 const bankRouter = require('./routes/bankRoutes');
 const rentalRouter = require('./routes/rentalRoutes');
 
+// Start the Express App
 const app = express();
 
 // * PUG Templates and Views
