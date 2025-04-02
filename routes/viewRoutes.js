@@ -46,7 +46,7 @@ router.get(
 );
 
 // * Natours
-router.get('/', viewsController.viewsController.getHomePage);
+router.get('/', viewsController.getHomePage);
 router.get('/tour/:slug', viewsController.getTour);
 
 router.get('/login', viewsController.getLoginForm);
