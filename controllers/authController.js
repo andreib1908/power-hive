@@ -47,7 +47,43 @@ exports.signup = catchAsync(async (req, res, next) => {
     passwordConfirm: req.body.passwordConfirm,
   });
 
-  createSendToken(newUser, 201, res);
+  try {
+    const message = `
+===========================
+  🐝 Welcome to PowerHive!
+===========================
+
+Hi ${newUser.name},
+
+Your account has been successfully created. We're thrilled to have you as part of the PowerHive community! ⚡
+
+Here's what you can do next:
+- Log in using your email and password
+- Rent a power bank from any station
+- Return it to any other station — fast, simple, and clean
+
+Buzz buzz,  
+The PowerHive Team 🐝
+`;
+
+    await sendEmail({
+      email: newUser.email,
+      subject: 'Welcome to PowerHive!',
+      message,
+    });
+
+    // Only create and send token if the email was sent successfully
+    createSendToken(newUser, 201, res);
+  } catch (err) {
+    // Cleanup if email fails
+    await User.findByIdAndDelete(newUser._id); // Optional: rollback user creation
+    return next(
+      new AppError(
+        'Account created, but we failed to send a welcome email. Please try again.',
+        500,
+      ),
+    );
+  }
 });
 
 exports.login = catchAsync(async (req, res, next) => {
